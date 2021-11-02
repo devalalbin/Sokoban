@@ -1,0 +1,45 @@
+body{
+    background-color: lightcyan;
+}
+
+#map{
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+}
+
+
+.wall{
+    height:50px;
+	width:50px;
+    background-color: brown;
+    outline:1px solid #000;
+    /*background-image: url("imageFile.png");*/
+}
+.player{
+    height:50px;
+	width:50px;
+    background-color: yellow;
+    outline:1px solid #000;
+    /*background-image: url("imageFile.png");*/
+}
+
+.goal{
+    height:50px;
+	width:50px;
+    background-color: green;
+    outline:1px solid #000;
+    /*background-image: url("imageFile.png");*/
+}
+
+.block{
+    height:50px;
+	width:50px;
+    background-color: red;
+    outline:1px solid #000;
+    /*background-image: url("imageFile.png");*/
+}
+.empty{
+    height:50px;
+	width:50px;
+    /*background-image: url("imageFile.png");*/
+}
