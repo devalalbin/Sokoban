@@ -20,20 +20,20 @@ function validateInput()
     }
 }
 
+
 /*a function to generate the elements that will represent the tiles from the 
 map array*/
 function drawMap(tileMap){
+    var temp;
 
-    for(let y = 0; y < tileMap.width; y++)
+    for(let x = 0; x < tileMap.height; x++)
     {
-       /* var col = document.createElement("div"); 
-        col.className = "col"; */
+       
 
-        for(let x = 0; x < tileMap.height; x++)
+        for(let y = 0; y < tileMap.width; y++)
         {
-            /*console.log("x:" + x + " y:" + y + " SPOT " ); console.log(tileMap.mapGrid[x][y]);*/
-            var temp;
-
+            
+            
             if(tileMap.mapGrid[x][y]== "W"){
                 console.log("Wall");
                 /* Map each entity to a color*/
@@ -84,10 +84,13 @@ function drawMap(tileMap){
 }
 
 
+function gridPosTest(tileMap){
+    console.log(tileMap.gridMap[0][0]);
+}
 
 
 
-
+/*todo hitta gridposition för specifik element*/
 
 
 /*
