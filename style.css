@@ -14,14 +14,10 @@ body{
 	width:50px;
     background-color: brown;
     outline:1px solid #000;
-    /*background-image: url("imageFile.png");*/
 }
 .player{
     height:50px;
 	width:50px;
-    background-color: yellow;
-    outline:1px solid #000;
-    /*background-image: url("imageFile.png");*/
 }
 
 .goal{
@@ -29,7 +25,6 @@ body{
 	width:50px;
     background-color: green;
     outline:1px solid #000;
-    /*background-image: url("imageFile.png");*/
 }
 
 .block{
@@ -42,5 +37,4 @@ body{
 .empty{
     height:50px;
 	width:50px;
-    /*background-image: url("imageFile.png");*/
 }
