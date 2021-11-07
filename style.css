@@ -15,15 +15,16 @@ body{
     background-color: brown;
     outline:1px solid #000;
 }
-.player{
-    height:50px;
-	width:50px;
-}
-
 .goal{
     height:50px;
 	width:50px;
     background-color: green;
+    outline:1px solid #000;
+}
+.player{
+    height:50px;
+	width:50px;
+    background-color: yellow;
     outline:1px solid #000;
 }
 

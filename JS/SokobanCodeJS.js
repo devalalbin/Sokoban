@@ -1,7 +1,5 @@
 var playerposX = 11;
 var playerposY = 11;//starting pos for player
-var img = document.createElement("img");
-img.src = "player.png";
 
 /*a function to generate the elements that will represent the tiles from the 
 map array*/
@@ -10,19 +8,15 @@ function drawMap(tileMap){
 
     for(let x = 0; x < tileMap.height; x++)
     {
-       
-
         for(let y = 0; y < tileMap.width; y++)
         {
-            
-            
+       
             if(tileMap.mapGrid[x][y]== "W"){
                 console.log("Wall");
                 /* Map each entity to a color*/
                 temp=document.createElement('div');
                 temp.className = 'wall';
-                
-            
+                           
             }
             else if (tileMap.mapGrid[x][y]== "B"){
                 console.log("BLOCK");
@@ -35,24 +29,19 @@ function drawMap(tileMap){
                 console.log("PLAYER");
                 temp=document.createElement('div');
                 temp.className = 'player';
-                temp.innerHTML = "player";
+                temp.innerHTML = 'player';
                 temp.id = "x"+x+"y"+y;
-            
-                
-                
+                     
             }
             else if (tileMap.mapGrid[x][y]== "G"){
                 console.log("GOAL");
                 temp=document.createElement('div');
-                temp.className = 'goal';
-                
-               
+                temp.className = 'goal';    
             }
             
             else if (tileMap.mapGrid[x][y]== " "){
                 console.log("EMPTY SPACE");
                 temp=document.createElement('div');
-                
                 
             }
 
@@ -63,8 +52,6 @@ function drawMap(tileMap){
         
     }
 }
-
-
 function gameLogic(x,y){ /* takes player class and spot it want to move to and 'swaps' their id and class*/
    //tracking 3 pos, current player pos / space you want to move pos / and space you want to move in +1
     var oldPos = "x"+(playerposX)+"y"+(playerposY);
@@ -79,7 +66,6 @@ function gameLogic(x,y){ /* takes player class and spot it want to move to and '
 
     if(document.getElementById(newPos).className != 'wall' && document.getElementById(newPos).className != 'block' && document.getElementById(newPos).className != 'goal block'){
          //check if new pos is a wall or block, and if its not update player pos
-        
         document.getElementById(oldPos).innerHTML = "";
         document.getElementById(oldPos).classList.remove("player")
         document.getElementById(newPos).innerHTML = ("player");
@@ -104,10 +90,8 @@ function gameLogic(x,y){ /* takes player class and spot it want to move to and '
             document.getElementById(stepaheadPos).classList.add("block");
 
             playerposX = newPosX;
-            playerposY = newPosY;
-            
-        }
-   
+            playerposY = newPosY;     
+        } 
     }    
     winCondition();     
 
