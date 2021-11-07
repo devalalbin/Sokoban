@@ -29,7 +29,7 @@ function drawMap(tileMap){
                 console.log("PLAYER");
                 temp=document.createElement('div');
                 temp.className = 'player';
-                temp.innerHTML = 'player';
+                temp.innerHTML = "<img src=\'player.png'>";
                 temp.id = "x"+x+"y"+y;
                      
             }
@@ -68,7 +68,7 @@ function gameLogic(x,y){ /* takes player class and spot it want to move to and '
          //check if new pos is a wall or block, and if its not update player pos
         document.getElementById(oldPos).innerHTML = "";
         document.getElementById(oldPos).classList.remove("player")
-        document.getElementById(newPos).innerHTML = ("player");
+        document.getElementById(newPos).innerHTML = "<img src=\'player.png'>";
         document.getElementById(newPos).classList.add("player"); // replace block class with player in  new pos
 
         playerposX = newPosX;
@@ -84,7 +84,7 @@ function gameLogic(x,y){ /* takes player class and spot it want to move to and '
 
             document.getElementById(newPos).classList.remove("block");
             document.getElementById(newPos).classList.add("player"); // replace block class with player in  new pos
-            document.getElementById(newPos).innerHTML = "player";
+            document.getElementById(newPos).innerHTML = "<img src=\'player.png'>";
 
             document.getElementById(stepaheadPos).innerHTML = "block";
             document.getElementById(stepaheadPos).classList.add("block");
